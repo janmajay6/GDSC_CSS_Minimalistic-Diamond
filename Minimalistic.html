@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.diamond{
+  position: absolute;
+  top:25%;
+  left:50%;
+  width:160px;
+  transformation: translate{-50% ,-50%};
+}
+
+span:nth-child(1)
+{
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  width:50px;
+  height:50px;
+  background:#E5BA73;
+  transform: skew(-30deg);
+  z-index:2;
+}
+span:nth-child(1):before{
+  content:'';
+  position:absolute;
+  top:50px;
+  left:60px;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:108px 0 12px 50px;
+  border-color:#C58940 transparent transparent transparent;
+  transform:skewX(45deg);
+}
+
+span:nth-child(2)
+{
+  position:absolute;
+  top:0;
+  left:35px;
+  display:block;
+  width:90px;
+  height:50px;
+  background:#FAEAB1;
+  z-index: 1;
+}
+span:nth-child(2):before{
+  content:'';
+  position:absolute;
+  top:50px;
+  left:-10px;
+  width:0;
+  height:0;
+  border-top:108px solid #FAEAB1;
+}
+span:nth-child(2):before{
+  content:'';
+  position:absolute;
+  top:50px;
+  left:-10px;
+  width:0;
+  height:0;
+  border-top:108px solid #E5BA73;
+  border-left: 55px solid transparent;
+  border-right:55px solid  transparent;
+  border-top:108px solid #E5BA73;
+
+
+}
+span:nth-child(3){
+  position:absolute;
+  top:0;
+  right:0;
+  display: block;
+  width:50px;
+  height:50px;
+  background:#E5BA73;
+  transform: skew(30deg);
+  z-index:3;
+}
+span:nth-child(3):before{
+  content:'';
+  position:absolute;
+  top:50px;
+  left:-53px;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:108px 50px 0 0;
+  border-color:#C58940 transparent transparent transparent;
+  transform:skewX(-45deg);
+}
+
+  </style>
+  <body>
+    <div class="diamond">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  </body>
+</html>
